@@ -3,8 +3,12 @@ const path = require('path');
 module.exports = {
   context: path.join(__dirname, '/src'),
 
+  devtool: 'source-map',
+
+  watch: true,
+  
   entry: {
-    javascript: './index'
+    javascript: './js/index'
   },
 
   output: {
@@ -16,7 +20,7 @@ module.exports = {
     alias: {
       react: path.join(__dirname, 'node_modules', 'react')
     },
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.css'],
   },
 
   module: {
@@ -29,6 +33,14 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'file?name=[name].[ext]',
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
     ],
   },

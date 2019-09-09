@@ -1,0 +1,17 @@
+@import 'gradient';
+
+$theme-font: verdana, sans-serif;
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.row {
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    float: none;
+    margin: 5em;
+    padding: 1em;
+}
