@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './../styles/appStyles.scss';
+import TopSpot from './topspot';
 
+export default class App extends Component {
+  constructor(props) {
+      super(props);
 
-class App extends Component {
+      this.state = {
+          topspots: []
+      };
+  }
+
+  componentWillMount() {
+    axios
+    .get('https://origin-top-spots-api.herokuapp.com/api/topspots')
+    .then(response => response.data)
+    .then(topspots => this.setState({ topspots }));
+  }
+
   render() {
     return (
       <div className='App'>
@@ -12,12 +28,18 @@ class App extends Component {
               <h1>San Diego Top Spots</h1>
               <div>A list of the top 30 places to see in San Diego, California.</div>
 
-
           </div>
+          { 
+            this.state.topspots.map(topspot => (
+                <TopSpot
+                    key={topspot.id}
+                    name={topspot.name}
+                    description={topspot.description}
+                    location={topspot.location} />
+            ))
+          }
         </div>
       </div>
     );
   }
 }
-
-export default App;

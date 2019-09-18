@@ -9,9 +9,38 @@ $theme-font: verdana, sans-serif;
 
 .row {
     color: white;
+    background: rgb(145, 2, 145);
     border-style: solid;
     border-width: 1px;
+    border-radius: 1em;
     float: none;
     margin: 5em;
     padding: 1em;
+    opacity: 0.9;
+    text-align: center;
 }
+
+.well {
+    color: white;
+    background: rgb(97, 94, 97);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1em;
+    float: none;
+    margin: 1em 5em 1em 5em;
+    padding: 1em;
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(116, 57, 224);
+    border: none;
+    border-radius: 1em;
+    float: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
