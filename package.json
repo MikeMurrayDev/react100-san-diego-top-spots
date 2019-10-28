@@ -1,6 +1,10 @@
 {
   "name": "mm-top-spots",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
