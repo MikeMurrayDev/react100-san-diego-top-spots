@@ -1,3 +1,4 @@
+
 const path = require('path');
 
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
 
   devtool: 'source-map',
 
-  watch: true,
+  // watch: true,
   
   entry: {
     javascript: './js/index'
